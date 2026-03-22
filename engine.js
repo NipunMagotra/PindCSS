@@ -55,7 +55,16 @@ const Pind = {
             'w-full': { width: '100%' },
             'h-full': { height: '100%' },
             'h-screen': { height: '100vh' },
-            'w-screen': { width: '100vw' }
+            'w-screen': { width: '100vw' },
+            
+            // Ultra-modern effects included by default
+            'glass': { 
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
+            }
         };
 
         if (directMap[className]) return directMap[className];
@@ -134,6 +143,16 @@ const Pind = {
             case 'bottom': return { bottom: val };
             case 'left': return { left: val };
             case 'right': return { right: val };
+            
+            // Gradients
+            case 'grad': 
+                const gradients = {
+                    'sunset': 'linear-gradient(to right, #ff7e5f, #feb47b)',
+                    'ocean': 'linear-gradient(to right, #1d3557, #457b9d)',
+                    'candy': 'linear-gradient(to right, #ffb199, #ff0844)',
+                    'lemon': 'linear-gradient(to right, #bef264, #22c55e)'
+                };
+                return { background: gradients[valStr] || 'none' };
         }
 
         return null;
@@ -150,7 +169,25 @@ const Pind = {
     formatColor(val) {
         // Automatically prefix hex codes with # if it looks like a hex color
         if (/^([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(val)) return `#${val}`;
-        return val; // e.g., "red", "transparent", "rgba(0,0,0,0.5)"
+        
+        // Built-in curated beautiful palette (no ugly basic web colors)
+        const colorMap = {
+            'black': '#0f172a',
+            'white': '#ffffff',
+            'gray': '#64748b',
+            'red': '#ef4444',
+            'green': '#22c55e',
+            'yellow': '#eab308',
+            'lemon': '#bef264',
+            'blue': '#3b82f6',
+            'ocean': '#1d3557',      // From your theme
+            'strawberry': '#e63946', // From your theme
+            'honeydew': '#f1faee',   // From your theme
+            'sky': '#a8dadc',        // From your theme
+            'steel': '#457b9d'       // From your theme
+        };
+
+        return colorMap[val.toLowerCase()] || val; // Fallback to raw value (e.g. "transparent")
     }
 };
 

@@ -5,23 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pind CSS</title>
     <script src="engine.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #f1faee; margin: 0; min-height: 100vh; }
-        .type-heading { font-family: 'Playfair Display', serif; }
-        .type-body { font-family: 'Space Mono', monospace; }
-        
-        .shadow-brutal { box-shadow: 6px 6px 0px 0px #1d3557; }
-        .shadow-brutal-sm { box-shadow: 3px 3px 0px 0px #1d3557; }
-
-        .btn-hover { transition: transform 0.1s ease, box-shadow 0.1s ease; }
-        .btn-hover:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0px 0px #1d3557; }
-        .btn-hover:active { transform: translate(0, 0); box-shadow: 0px 0px 0px 0px #1d3557; }
-
-        pre, code { margin: 0; padding: 0; font-family: 'Space Mono', monospace; }
-        .code-block { background-color: #1d3557; color: #f1faee; padding: 16px; font-size: 14px; overflow-x: auto; margin-top: 15px; }
-        .doc-section { background-color: #f1faee; border: 1px solid #1d3557; padding: 40px; box-shadow: 6px 6px 0px 0px #1d3557; display: flex; flex-direction: column; gap: 10px; }
-    </style>
 </head>
 <body class="bg-f1faee c-1d3557 type-body flex col pb-100 items-center">
 
@@ -69,13 +54,14 @@
 
             <div class="doc-section">
                 <h2 class="type-heading fs-40 m-0">2. Colors</h2>
-                <p class="m-0 fs-16 lh-1.5">You don't need the hashtag for color codes. Use `bg-` for background and `c-` for text color.</p>
+                <p class="m-0 fs-16 lh-1.5">Use curated color names for beautiful results, or raw hex codes. No hashtags needed.</p>
                 <ul class="m-0 mt-10">
-                    <li><b>Background:</b> <code>bg-1d3557</code>, <code>bg-e63946</code>, <code>bg-a8dadc</code></li>
-                    <li><b>Text Color:</b> <code>c-f1faee</code>, <code>c-1d3557</code></li>
+                    <li><b>Basic:</b> <code>bg-black</code>, <code>bg-red</code>, <code>bg-green</code>, <code>bg-lemon</code>, <code>bg-yellow</code>, <code>bg-blue</code></li>
+                    <li><b>Theme:</b> <code>bg-ocean</code>, <code>bg-strawberry</code>, <code>bg-honeydew</code>, <code>bg-sky</code>, <code>bg-steel</code></li>
+                    <li><b>Text Color:</b> <code>c-honeydew</code>, <code>c-ocean</code>, <code>c-white</code></li>
                 </ul>
-                <div class="code-block border-1d3557"><code>&lt;div class="bg-e63946 c-f1faee p-20"&gt;Solid Colors&lt;/div&gt;</code></div>
-                <div class="bg-e63946 c-f1faee p-20 mt-20 fw-700 fs-20 text-center border-1d3557">We picked a Strawberry Red background!</div>
+                <div class="code-block border-1d3557"><code>&lt;div class="bg-strawberry c-honeydew p-20"&gt;Strawberry Red&lt;/div&gt;</code></div>
+                <div class="bg-strawberry c-honeydew p-20 mt-20 fw-700 fs-20 text-center border-1d3557">We picked a Strawberry background!</div>
             </div>
 
             <div class="doc-section">
@@ -113,6 +99,27 @@
                     <div class="bg-a8dadc c-1d3557 p-20 w-50p text-center border-1d3557 fw-700" style="box-sizing: border-box;">Box 1</div>
                     <div class="bg-457b9d c-f1faee p-20 w-50p text-center border-1d3557 fw-700" style="box-sizing: border-box;">Box 2</div>
                 </div>
+            </div>
+
+            <div class="doc-section">
+                <h2 class="type-heading fs-40 m-0">6. Cool Advanced Effects</h2>
+                <p class="m-0 fs-16 lh-1.5">Want to impress people without writing crazy CSS? Use built-in effects.</p>
+                <ul class="m-0 mt-10">
+                    <li><b>Frosted Glass:</b> Just write <code>glass</code> to make a frosty blurry background.</li>
+                    <li><b>Gradients:</b> Write <code>grad-sunset</code>, <code>grad-ocean</code>, <code>grad-candy</code>, or <code>grad-lemon</code> to instantly apply beautiful gradients.</li>
+                </ul>
+                <div class="code-block border-1d3557"><code>&lt;div class="grad-ocean p-20 c-white"&gt;Wow!&lt;/div&gt;</code></div>
+                
+                <div class="grad-sunset p-40 mt-20 border-1d3557 relative flex col center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center;">
+                    <!-- The glass token applies the effect! -->
+                    <div class="glass p-20 text-center radius-10 c-ocean fw-700 fs-20 shadow-brutal w-100p">
+                        Pure <code>glass</code> effect!
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-40 mb-20 flex row center w-100p">
+                <p class="fs-24 fw-700 c-1d3557 bg-a8dadc inline-block p-16 border-1d3557 shadow-brutal-sm m-0 type-body text-center">More features coming soon...</p>
             </div>
 
         </div>
