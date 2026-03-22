@@ -4,7 +4,7 @@
   "description": "A lightweight utility-first styling library that runs directly in the browser.",
   "main": "engine.js",
   "bin": {
-    "pindcss": "./bin/cli.js"
+    "pindcss": "bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
