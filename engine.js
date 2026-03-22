@@ -2,19 +2,26 @@ const Pind = {
     init() {
         this.scan(document.body);
         
-        // Dynamic DOM observer so any new elements added dynamically get styles applied instantly!
+        // Dynamic DOM observer so any new elements added or classes updated get styles applied instantly!
         const observer = new MutationObserver(mutations => {
             mutations.forEach(mutation => {
-                mutation.addedNodes.forEach(node => {
-                    if (node.nodeType === 1) {
-                        this.scan(node);
-                    }
-                });
+                if (mutation.type === 'childList') {
+                    mutation.addedNodes.forEach(node => {
+                        if (node.nodeType === 1) this.scan(node);
+                    });
+                } else if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    this.scan(mutation.target);
+                }
             });
         });
         
-        // Start observing document body for injected elements
-        observer.observe(document.body, { childList: true, subtree: true });
+        // Start observing document body for injected elements AND class changes!
+        observer.observe(document.body, { 
+            childList: true, 
+            subtree: true, 
+            attributes: true, 
+            attributeFilter: ['class'] 
+        });
     },
 
     scan(rootNode) {

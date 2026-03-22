@@ -15,33 +15,57 @@
         <div class="absolute bg-1d3557 w-100p h-500 top-40 left-40 z-0 hidden md:block" style="left: 40px; top: 40px; width: calc(100% - 40px);"></div>
 
         <div class="bg-f1faee border-1d3557 pt-80 pr-40 pl-60 pb-80 z-10 relative flex col gap-20">
-            <h1 class="type-heading fs-72 m-0 lh-1.1 c-1d3557 max-w-700">Pind CSS</h1>
+            <h1 class="type-heading fs-72 m-0 lh-1.1 c-1d3557 max-w-700"><span class="pind-easter-egg" data-punjabi="ਪਿੰਡ">Pind</span> CSS</h1>
             <p class="fs-18 m-0 lh-1.5 max-w-500 c-457b9d fw-400 mt-10">
                 The easiest way to style your website using just HTML classes. No setup required!
             </p>
             
             <div class="flex row gap-10 mt-20 flex-wrap pt-20 pb-20 border-1d3557" style="border-width: 1px 0; border-style: solid; border-left: none; border-right: none;">
-                <span class="bg-1d3557 c-f1faee px-12 py-4 border-1d3557 fs-14 fw-700">Beginner Friendly</span>
                 <span class="bg-e63946 c-f1faee px-12 py-4 border-1d3557 fs-14 shadow-brutal-sm fw-700">v1.0.0</span>
             </div>
             
-            <div class="mt-20">
-                <button class="type-body bg-e63946 c-f1faee border-1d3557 px-40 py-20 fs-20 fw-700 pointer btn-hover z-20 relative shadow-brutal inline-block" onclick="addDynamicElement()">
-                    Click to add a box!
-                </button>
-            </div>
-            <div id="dynamic-container" class="mt-20 flex row wrap gap-10"></div>
+
         </div>
 
         <div class="mt-60 flex col gap-40 w-100p relative z-10">
             
+            <!-- Index Section -->
             <div class="doc-section">
-                <h2 class="type-heading fs-40 m-0">How to install</h2>
-                <p class="m-0 fs-16 lh-1.5 c-457b9d fw-700">Just put this script tag in your HTML file and you are good to go.</p>
-                <div class="code-block border-1d3557"><code>&lt;script src="engine.js"&gt;&lt;/script&gt;</code></div>
+                <h2 class="type-heading fs-32 m-0 c-1d3557">On this page</h2>
+                <ul class="m-0 mt-10 flex col gap-10 lh-1.5 fw-700" style="list-style-type: none; padding: 0;">
+                    <li><a href="#what-is-pind" class="c-e63946" style="text-decoration: none;">&rarr; What is Pind CSS?</a></li>
+                    <li><a href="#quick-start" class="c-e63946" style="text-decoration: none;">&rarr; Quick Start</a></li>
+                    <li><a href="#spacing" class="c-e63946" style="text-decoration: none;">&rarr; 1. Spacing</a></li>
+                    <li><a href="#colors" class="c-e63946" style="text-decoration: none;">&rarr; 2. Colors</a></li>
+                    <li><a href="#text" class="c-e63946" style="text-decoration: none;">&rarr; 3. Text</a></li>
+                    <li><a href="#borders" class="c-e63946" style="text-decoration: none;">&rarr; 4. Borders & Radius</a></li>
+                    <li><a href="#layout" class="c-e63946" style="text-decoration: none;">&rarr; 5. Layout Settings</a></li>
+                    <li><a href="#cool-effects" class="c-e63946" style="text-decoration: none;">&rarr; 6. Cool Advanced Effects</a></li>
+                </ul>
             </div>
 
-            <div class="doc-section">
+            <div class="doc-section" id="what-is-pind">
+                <h2 class="type-heading fs-40 m-0">What is Pind CSS?</h2>
+                <p class="m-0 fs-16 lh-1.5">Pind CSS reads your standard HTML <code>class</code> tags, automatically resolves the names into beautiful properties, and applies the style rules directly onto your elements at runtime. No build tools needed.</p>
+            </div>
+
+            <div class="doc-section" id="quick-start">
+                <h2 class="type-heading fs-40 m-0">Quick Start</h2>
+                <p class="m-0 fs-16 lh-1.5 c-457b9d fw-700">Install from npm or drop the CDN script directly into your HTML file.</p>
+                
+                <div class="flex row gap-10 mt-10 mb-10" style="flex-wrap: wrap;">
+                    <a href="https://www.npmjs.com/package/pind-css" target="_blank" class="type-body bg-1d3557 c-f1faee border-1d3557 px-20 py-10 fs-14 fw-700 pointer btn-hover shadow-brutal-sm" style="text-decoration: none;">Open NPM Package</a>
+                    <a href="https://github.com/NipunMagotra/PindCSS" target="_blank" class="type-body bg-e63946 c-f1faee border-1d3557 px-20 py-10 fs-14 fw-700 pointer btn-hover shadow-brutal-sm" style="text-decoration: none;">Open GitHub Repo</a>
+                </div>
+
+                <h3 class="type-heading fs-24 m-0 mt-20">NPM Install</h3>
+                <div class="code-block border-1d3557"><code>npm install github:NipunMagotra/PindCSS</code></div>
+                
+                <h3 class="type-heading fs-24 m-0 mt-20">CDN (Drop-in script)</h3>
+                <div class="code-block border-1d3557"><code>&lt;script src="https://cdn.jsdelivr.net/gh/NipunMagotra/PindCSS@main/engine.js"&gt;&lt;/script&gt;</code></div>
+            </div>
+
+            <div class="doc-section" id="spacing">
                 <h2 class="type-heading fs-40 m-0">1. Spacing</h2>
                 <p class="m-0 fs-16 lh-1.5">Just type a number to add pixels. E.g `p-20` adds 20px padding.</p>
                 <ul class="m-0 mt-10">
@@ -49,10 +73,17 @@
                     <li><b>Margin:</b> <code>m-10</code> (all sides), <code>mb-40</code> (bottom), <code>mx-auto</code> (center)</li>
                 </ul>
                 <div class="code-block border-1d3557"><code>&lt;div class="p-20 mt-10"&gt;Padded Box&lt;/div&gt;</code></div>
-                <div class="bg-1d3557 c-f1faee p-20 mt-20 text-center fw-700">p-20 adds a lot of space inside here</div>
+                
+                <p class="fw-700 c-457b9d mt-20 m-0">Interactive Demo: Spacing</p>
+                <div class="flex row gap-10 mt-10" style="flex-wrap: wrap;">
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo1').className += ' p-10 '">p-10</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo1').className += ' p-40 '">p-40</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo1').className += ' p-80 '">p-80</button>
+                </div>
+                <div id="demo1" class="bg-1d3557 c-f1faee p-20 mt-20 text-center fw-700" style="transition: all 0.3s ease;">Watch my padding change live!</div>
             </div>
 
-            <div class="doc-section">
+            <div class="doc-section" id="colors">
                 <h2 class="type-heading fs-40 m-0">2. Colors</h2>
                 <p class="m-0 fs-16 lh-1.5">Use curated color names for beautiful results, or raw hex codes. No hashtags needed.</p>
                 <ul class="m-0 mt-10">
@@ -61,10 +92,17 @@
                     <li><b>Text Color:</b> <code>c-honeydew</code>, <code>c-ocean</code>, <code>c-white</code></li>
                 </ul>
                 <div class="code-block border-1d3557"><code>&lt;div class="bg-strawberry c-honeydew p-20"&gt;Strawberry Red&lt;/div&gt;</code></div>
-                <div class="bg-strawberry c-honeydew p-20 mt-20 fw-700 fs-20 text-center border-1d3557">We picked a Strawberry background!</div>
+                
+                <p class="fw-700 c-457b9d mt-20 m-0">Interactive Demo: Colors</p>
+                <div class="flex row gap-10 mt-10" style="flex-wrap: wrap;">
+                    <button class="bg-e63946 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo2').className += ' bg-strawberry c-honeydew '">Strawberry</button>
+                    <button class="bg-bef264 c-1d3557 border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo2').className += ' bg-lemon c-1d3557 '">Lemon</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo2').className += ' bg-ocean c-white '">Ocean</button>
+                </div>
+                <div id="demo2" class="bg-1d3557 c-f1faee p-20 mt-20 fw-700 fs-20 text-center border-1d3557" style="transition: all 0.4s ease;">Click a button to change my color.</div>
             </div>
 
-            <div class="doc-section">
+            <div class="doc-section" id="text">
                 <h2 class="type-heading fs-40 m-0">3. Text</h2>
                 <p class="m-0 fs-16 lh-1.5">Make your text look exactly how you want it.</p>
                 <ul class="m-0 mt-10">
@@ -72,10 +110,16 @@
                     <li><b>Alignment:</b> <code>text-center</code>, <code>text-left</code>, <code>text-right</code></li>
                 </ul>
                 <div class="code-block border-1d3557"><code>&lt;p class="fs-32 fw-700 text-center c-457b9d"&gt;Large Text&lt;/p&gt;</code></div>
-                <p class="fs-32 fw-700 text-center border-1d3557 p-20 m-0 mt-20 bg-f1faee c-457b9d">Big Text</p>
+                
+                <p class="fw-700 c-457b9d mt-20 m-0">Interactive Demo: Typography</p>
+                <div class="flex row gap-10 mt-10" style="flex-wrap: wrap;">
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo3').className += ' fs-16 fw-400 text-left '">fs-16 & text-left</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo3').className += ' fs-40 fw-900 text-center '">fs-40 & text-center</button>
+                </div>
+                <p id="demo3" class="fs-24 fw-700 text-center border-1d3557 p-20 m-0 mt-20 bg-f1faee c-457b9d" style="transition: all 0.3s ease;">Watch my font change.</p>
             </div>
 
-            <div class="doc-section">
+            <div class="doc-section" id="borders">
                 <h2 class="type-heading fs-40 m-0">4. Borders and Radius</h2>
                 <p class="m-0 fs-16 lh-1.5">Draw lines around boxes and make the corners round easily.</p>
                 <ul class="m-0 mt-10">
@@ -83,10 +127,16 @@
                     <li><b>Borders:</b> <code>border-1d3557</code> (Use color to add a border), <code>border-none</code> (Remove borders)</li>
                 </ul>
                 <div class="code-block border-1d3557"><code>&lt;div class="border-1d3557 radius-10 p-20"&gt;Rounded&lt;/div&gt;</code></div>
-                <div class="border-1d3557 radius-10 p-20 mt-20 bg-f1faee text-center fw-700" style="border-style: solid; border-width: 1px;">Round Box</div>
+                
+                <p class="fw-700 c-457b9d mt-20 m-0">Interactive Demo: Geometry</p>
+                <div class="flex row gap-10 mt-10" style="flex-wrap: wrap;">
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo4').className += ' radius-10 border-1d3557 border-dashed shadow-none '">Square Dashed</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo4').className += ' radius-100p border-A03A13 shadow-brutal '">Brutal Circle</button>
+                </div>
+                <div id="demo4" class="border-1d3557 radius-10 p-20 mt-20 bg-f1faee text-center fw-700" style="border-style: solid; border-width: 2px; transition: all 0.4s ease; min-height: 100px; display: flex; align-items: center; justify-content: center;">Rounded Box</div>
             </div>
 
-            <div class="doc-section">
+            <div class="doc-section" id="layout">
                 <h2 class="type-heading fs-40 m-0">5. Layout Settings</h2>
                 <p class="m-0 fs-16 lh-1.5">Put things exactly where you want them side by side.</p>
                 <ul class="m-0 mt-10">
@@ -95,13 +145,19 @@
                     <li><b>Size:</b> <code>w-100p</code> (100% width)</li>
                 </ul>
                 <div class="code-block border-1d3557"><code>&lt;div class="flex row center gap-20 w-100p"&gt;...&lt;/div&gt;</code></div>
-                <div class="flex row center gap-20 w-100p mt-20 p-20 border-1d3557 bg-1d3557" style="box-sizing: border-box;">
+                
+                <p class="fw-700 c-457b9d mt-20 m-0">Interactive Demo: Flex Layout</p>
+                <div class="flex row gap-10 mt-10" style="flex-wrap: wrap;">
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo5').className += ' row '">flex row</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo5').className += ' col '">flex col</button>
+                </div>
+                <div id="demo5" class="flex row center gap-20 w-100p mt-20 p-20 border-1d3557 bg-1d3557" style="box-sizing: border-box; transition: all 0.4s ease;">
                     <div class="bg-a8dadc c-1d3557 p-20 w-50p text-center border-1d3557 fw-700" style="box-sizing: border-box;">Box 1</div>
                     <div class="bg-457b9d c-f1faee p-20 w-50p text-center border-1d3557 fw-700" style="box-sizing: border-box;">Box 2</div>
                 </div>
             </div>
 
-            <div class="doc-section">
+            <div class="doc-section" id="cool-effects">
                 <h2 class="type-heading fs-40 m-0">6. Cool Advanced Effects</h2>
                 <p class="m-0 fs-16 lh-1.5">Want to impress people without writing crazy CSS? Use built-in effects.</p>
                 <ul class="m-0 mt-10">
@@ -110,30 +166,29 @@
                 </ul>
                 <div class="code-block border-1d3557"><code>&lt;div class="grad-ocean p-20 c-white"&gt;Wow!&lt;/div&gt;</code></div>
                 
-                <div class="grad-sunset p-40 mt-20 border-1d3557 relative flex col center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center;">
-                    <!-- The glass token applies the effect! -->
-                    <div class="glass p-20 text-center radius-10 c-ocean fw-700 fs-20 shadow-brutal w-100p">
-                        Pure <code>glass</code> effect!
+                <p class="fw-700 c-457b9d mt-20 m-0">Interactive Demo: Gradients & Glass</p>
+                <div class="flex row gap-10 mt-10" style="flex-wrap: wrap;">
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo6').className += ' grad-ocean '">grad-ocean</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo6').className += ' grad-candy '">grad-candy</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo6').className += ' grad-lemon '">grad-lemon</button>
+                    <button class="bg-1d3557 c-f1faee border-none py-10 px-20 fw-700 radius-10 pointer btn-hover" onclick="document.getElementById('demo6').className += ' glass '">glass effect</button>
+                </div>
+                
+                <div class="grad-sunset p-40 mt-20 border-1d3557 relative flex col center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; border-radius: 10px;">
+                    <!-- The token applies the effect live! -->
+                    <div id="demo6" class="glass p-20 text-center radius-10 c-ocean fw-700 fs-24 shadow-brutal w-100p" style="transition: all 0.5s ease;">
+                        Try gradients and glass!
                     </div>
                 </div>
             </div>
 
-            <div class="mt-40 mb-20 flex row center w-100p">
+            <div class="mt-40 mb-20 flex col center w-100p gap-20">
                 <p class="fs-24 fw-700 c-1d3557 bg-a8dadc inline-block p-16 border-1d3557 shadow-brutal-sm m-0 type-body text-center">More features coming soon...</p>
             </div>
 
         </div>
     </div>
 
-    <script>
-        let counter = 1;
-        function addDynamicElement() {
-            const container = document.getElementById('dynamic-container');
-            const el = document.createElement('div');
-            el.className = "bg-e63946 c-f1faee border-1d3557 p-12 fs-12 fw-700 type-body shadow-brutal-sm";
-            el.innerText = `[${counter++}] It works! Box added instantly`;
-            container.appendChild(el);
-        }
-    </script>
+
 </body>
 </html>

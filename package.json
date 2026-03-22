@@ -1,19 +1,29 @@
 {
   "name": "pind-css",
   "version": "1.0.0",
-  "description": "A zero-dependency, run-time utility CSS engine built in Vanilla JavaScript.",
+  "description": "A lightweight utility-first styling library that runs directly in the browser.",
   "main": "engine.js",
+  "bin": {
+    "pindcss": "./bin/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NipunMagotra/PindCSS.git"
+  },
   "keywords": [
-    "css-engine",
-    "utility-css",
-    "tailwind-alternative",
-    "zero-dependency",
-    "javascript-native",
-    "runtime-css"
+    "css",
+    "utility",
+    "runtime",
+    "pind",
+    "framework"
   ],
   "author": "Nipun Magotra",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NipunMagotra/PindCSS/issues"
+  },
+  "homepage": "https://nipunmagotra.github.io/PindCSS/"
 }
