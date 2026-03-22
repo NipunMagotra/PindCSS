@@ -1,0 +1,19 @@
+{
+  "name": "pind-css",
+  "version": "1.0.0",
+  "description": "A zero-dependency, run-time utility CSS engine built in Vanilla JavaScript.",
+  "main": "engine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css-engine",
+    "utility-css",
+    "tailwind-alternative",
+    "zero-dependency",
+    "javascript-native",
+    "runtime-css"
+  ],
+  "author": "Nipun Magotra",
+  "license": "MIT"
+}
